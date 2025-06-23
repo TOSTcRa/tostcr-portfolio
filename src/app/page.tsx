@@ -8,7 +8,7 @@ import ThemeSwitch from "./themeSwith";
 
 export default function Home() {
 	return (
-		<div className=''>
+		<div className='bg-foreground dark:bg-background transition-colors duration-300 ease-in-out'>
 			<Header />
 			<div className='flex flex-col items-center bg-foreground dark:bg-background transition-colors duration-300 ease-in-out'>
 				<Hero />

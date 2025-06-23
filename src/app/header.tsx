@@ -6,8 +6,8 @@ export default function Header() {
 	const [open, setOpen] = useState(false);
 	const pages = ["About", "Skills", "Projects", "Contact", "Resume"];
 	return (
-		<div className='transition-colors duration-300 ease-in-out border-b-1 md:border-b-black dark:md:border-b-white flex justify-center mb-10 sm:mb-0'>
-			<header className='container flex items-center justify-between fixed md:static bg-foreground dark:bg-background text-background dark:text-foreground z-1'>
+		<div className='border-b-1 md:border-b-black dark:md:border-b-white flex justify-center mb-10 sm:mb-0'>
+			<header className='container flex items-center justify-between fixed bg-foreground dark:bg-background md:bg-none md:dark:bg-none md:static text-background dark:text-foreground z-1'>
 				<div className='flex gap-4'>
 					<Image
 						src={"logo.svg"}
@@ -45,7 +45,7 @@ export default function Header() {
 						className='bg-gray-200 dark:bg-[#2E3033] py-2.5 px-4 rounded-4xl cursor-pointer hidden sm:block'>
 						Resume
 					</button>
-					<div className='sm:hidden'>
+					<div className='md:hidden'>
 						<input
 							id='menu__toggle'
 							type='checkbox'
@@ -53,7 +53,7 @@ export default function Header() {
 							onClick={() => setOpen(!open)}
 						/>
 						<label
-							className={`menu__btn flex items-center top-3 r-5 w-6.5 h-6.5 cursor-pointer z-2 ${
+							className={`menu__btn flex items-center top-3 right-5 sm:top-5 w-6.5 h-6.5 cursor-pointer z-2 ${
 								open ? "fixed" : "absolute"
 							}`}
 							htmlFor='menu__toggle'>
