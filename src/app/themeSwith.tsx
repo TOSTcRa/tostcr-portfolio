@@ -32,7 +32,7 @@ export default function ThemeToggle() {
 	return (
 		<button
 			onClick={toggleTheme}
-			className='group fixed bottom-5 right-5 z-50 flex items-center bg-background text-foreground p-3 rounded-full border border-[#2a2c30] overflow-hidden'
+			className='group fixed bottom-5 right-5 z-50 flex items-center bg-foreground dark:bg-background text-background dark:text-foreground p-3 rounded-full border border-gray-200 dark:border-[#2a2c30] overflow-hidden'
 			aria-label='Toggle Theme'>
 			<span className='text-xl transition-transform duration-500 ease-in-out'>
 				{isDark ? "☀️" : "🌙"}
